@@ -23,6 +23,7 @@
     <nav class="nav-links" id="navLinks">
       <a href="#about">關於</a>
       <a href="#topics">內容主題</a>
+      <a href="#social">社交內容</a>
       <a href="#resources">資源</a>
       <a href="#contact">聯絡</a>
     </nav>
@@ -113,6 +114,44 @@
     </div>
   </div>
 </section>
+
+<!-- ============ SOCIAL CONTENT ============ -->
+<section class="social" id="social">
+  <div class="container">
+    <p class="eyebrow">社交內容 · Social content</p>
+    <h2>我哋喺 IG / FB 分享嘅圖文</h2>
+    <p class="lead">每星期同家長分享一個 ADHD／神經多樣性小知識——由認識、理解到實戰支援。撳下面嘅系列，左右掃就可以睇晒成組圖文包。</p>
+
+    <!-- series chips -->
+    <div class="social-chips" id="seriesChips" role="tablist" aria-label="選擇圖文系列"></div>
+
+    <!-- slider -->
+    <div class="social-stage" id="socialStage" tabindex="0" aria-label="圖文幻燈片，可用左右鍵或掃動切換">
+      <button class="social-arrow social-prev" id="socialPrev" aria-label="上一張">‹</button>
+      <div class="social-track">
+        <div class="social-frame">
+          <img id="socialImg" src="" alt="">
+        </div>
+        <div class="social-title">
+          <span id="socialTitle"></span>
+          <span class="social-title-en" id="socialTitleEn"></span>
+        </div>
+        <div class="social-dots" id="socialDots"></div>
+      </div>
+      <button class="social-arrow social-next" id="socialNext" aria-label="下一張">›</button>
+    </div>
+
+    <!-- single posts -->
+    <h3 class="social-subhead">單圖貼文 · Single posts</h3>
+    <div class="singles-grid" id="singlesGrid"></div>
+  </div>
+</section>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="關閉">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
 
 <!-- ============ RESOURCES ============ -->
 <section class="resources" id="resources">
