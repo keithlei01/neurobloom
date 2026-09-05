@@ -133,16 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
     frame.addEventListener("click", function () {
       openLightbox(imgEl.src);
     });
-
-    // lightweight autoplay while visible (pause on hover/focus)
-    var timer = null;
-    function start() { stop(); timer = setInterval(function () { go(1); }, 4000); }
-    function stop() { if (timer) { clearInterval(timer); timer = null; } }
-    stageEl.addEventListener("mouseenter", stop);
-    stageEl.addEventListener("mouseleave", start);
-    stageEl.addEventListener("focusin", stop);
-    stageEl.addEventListener("focusout", start);
-    start();
   }
 
   // ---------- singles grid ----------
@@ -179,9 +169,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (lightbox) {
     lightboxClose.addEventListener("click", closeLightbox);
-    lightbox.addEventListener("click", function (e) {
-      if (e.target === lightbox) closeLightbox();
-    });
+    // clicking anywhere on the overlay (including the image) closes it
+    lightbox.addEventListener("click", closeLightbox);
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeLightbox();
     });

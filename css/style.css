@@ -304,6 +304,7 @@ section { padding: 88px 0; }
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.2s;
+  touch-action: manipulation;
 }
 .social-chip:hover { border-color: var(--purple); background: var(--purple-soft); }
 .social-chip.active {
@@ -392,6 +393,7 @@ section { padding: 88px 0; }
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 14px rgba(41, 16, 99, 0.1);
+  touch-action: manipulation;
 }
 .social-arrow:hover { background: var(--purple); border-color: var(--purple); color: #fff; }
 
@@ -414,6 +416,7 @@ section { padding: 88px 0; }
   border: 1px solid rgba(41, 16, 99, 0.06);
   cursor: zoom-in;
   transition: transform 0.25s, box-shadow 0.25s;
+  touch-action: manipulation;
 }
 .single-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .single-card img { width: 100%; height: auto; display: block; }
@@ -438,6 +441,8 @@ section { padding: 88px 0; }
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
+  touch-action: manipulation;
+  cursor: zoom-out;
 }
 .lightbox.open { opacity: 1; pointer-events: auto; }
 .lightbox img {
