@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function pad(n) { return n < 10 ? "0" + n : "" + n; }
 
   function renderChips() {
+    chipsEl.innerHTML = ""; // clear before re-render — prevents chip duplication on every click
     SERIES.forEach(function (s, i) {
       var b = document.createElement("button");
       b.className = "social-chip" + (i === cur ? " active" : "");
