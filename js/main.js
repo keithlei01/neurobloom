@@ -4,6 +4,33 @@ document.addEventListener("DOMContentLoaded", function () {
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Hamburger menu toggle
+  var toggle = document.getElementById("navToggle");
+  var navLinks = document.getElementById("navLinks");
+  if (toggle && navLinks) {
+    toggle.addEventListener("click", function () {
+      var open = navLinks.classList.toggle("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    // Close menu when a section link is tapped
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        toggle.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+    // Close on outside click
+    document.addEventListener("click", function (e) {
+      if (!navLinks.contains(e.target) && !toggle.contains(e.target)) {
+        navLinks.classList.remove("open");
+        toggle.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
   // Gentle reveal on scroll for cards
   var cards = document.querySelectorAll(".about-card, .topic-card, .resource-card");
   if ("IntersectionObserver" in window) {
