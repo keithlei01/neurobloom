@@ -15,24 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
       slides: 9
     },
     {
-      id: "adhd-what",
-      title: "ADHD 即係咩？三種亞型你要知",
-      en: "What is ADHD? Three subtypes you should know",
-      slides: 3
-    },
-    {
-      id: "adhd-why",
-      title: "點解會有 ADHD？先天 × 後天",
-      en: "Why ADHD happens — not a single cause",
-      slides: 3
-    },
-    {
-      id: "adhd-or-not",
-      title: "小朋友係咪 ADHD？",
-      en: "ADHD or not? It's about the impact, not just symptoms",
-      slides: 3
-    },
-    {
       id: "girls-intro",
       title: "ADHD in Girls — 唔係得「坐唔定」先係 ADHD",
       en: "Not just \"can't sit still\" — girls with ADHD",
